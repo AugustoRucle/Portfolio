@@ -100,7 +100,7 @@ export default function AboutMe() {
                     <div className="relative">
                         <div className="p-2 rounded-2xl shadow-2xl shadow-black/50">
                             <img
-                                src="/augusto-portrait.png"
+                                src="./augusto-portrait.png"
                                 alt="Augusto Ruiz Portrait"
                                 className="w-80 h-80 lg:w-96 lg:h-96 rounded-xl object-cover shadow-xl"
                             />
