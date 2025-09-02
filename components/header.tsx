@@ -244,9 +244,9 @@ export default function Header() {
                         />
 
                         <MobileNavItem
+                            onClick={downloadCV}
                             icon={FileTextOutlined}
-                            label="CV"
-                            onClick={closeMobileMenu}
+                            label={`CV (${selectedLanguage})`}
                         />
 
                         <div className="pt-4 border-t border-gray-700">
