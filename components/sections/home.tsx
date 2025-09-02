@@ -60,7 +60,7 @@ export default function Home() {
                     <div className="relative bg-gradient-to-br from-primary to-secondary p-1 rounded-full border-4 border-blue-900">
                         <div className="bg-background p-2 rounded-full">
                             <img
-                                src="/IMG_1225.jpg"
+                                src="./IMG_1225.jpg"
                                 alt="Augusto Ruiz - Frontend Developer"
                                 className="w-80 h-80 lg:w-110 lg:h-110 rounded-full object-cover"
                             />
@@ -71,7 +71,7 @@ export default function Home() {
                     <div
                         className="group absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#61DAFB] text-white p-5 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.1s_both]"
                         style={{
-                            backgroundImage: "url(/react_icon.png)",
+                            backgroundImage: "url(./react_icon.png)",
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                         }}
@@ -85,7 +85,7 @@ export default function Home() {
                     <div
                         className="group absolute top-8 -right-8 bg-orange-500 text-white p-2 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.2s_both] flex items-center justify-center"
                     >
-                        <img src='/html_icon.png' className='w-6 h-6' />
+                        <img src='./html_icon.png' className='w-6 h-6' />
 
                         <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             HTML5
@@ -94,7 +94,7 @@ export default function Home() {
 
                     {/* Tailwind - Cyan */}
                     <div className="group absolute right-4 bottom-1/3 bg-[#06B6D4] text-white p-3 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.3s_both]">
-                        <img src='/git.png' className='w-5 h-5' />
+                        <img src='./git.png' className='w-5 h-5' />
                         <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             Git
                         </div>
@@ -102,7 +102,7 @@ export default function Home() {
 
                     {/* JavaScript - Amarillo */}
                     <div className="group absolute -bottom-6 right-1/4 bg-[#F7DF1E] text-black p-3 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.4s_both] flex justify-center items-center">
-                        <img src='/java-script.png' className='w-5 h-5' />
+                        <img src='./java-script.png' className='w-5 h-5' />
 
                         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             JavaScript
@@ -111,7 +111,7 @@ export default function Home() {
 
                     {/* CSS - Azul */}
                     <div className="group absolute -bottom-6 left-1/4 bg-[#1572B6] text-white p-3 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.5s_both] flex justify-center items-center">
-                        <img src='/css-3.png' className='w-5 h-5' />
+                        <img src='./css-3.png' className='w-5 h-5' />
 
                         <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             CSS3
@@ -120,7 +120,7 @@ export default function Home() {
 
                     {/* Figma - Púrpura/Rosa */}
                     <div className="group absolute top-8 -left-8 bg-white p-2 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.6s_both]">
-                        <img src="/figma-icon.png" alt="Figma" className="w-5 h-5" />
+                        <img src="./figma-icon.png" alt="Figma" className="w-5 h-5" />
                         <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             Figma
                         </div>
@@ -128,7 +128,7 @@ export default function Home() {
 
                     {/* Three.js - Blanco */}
                     <div className="group absolute left-4 bottom-1/3 bg-white p-2 rounded-full shadow-lg cursor-pointer animate-[slideDown_1s_ease-out_0.7s_both]">
-                        <img src="/threejs-icon.png" alt="Three.js" className="w-6 h-6" />
+                        <img src="./threejs-icon.png" alt="Three.js" className="w-6 h-6" />
                         <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                             Three.js
                         </div>
