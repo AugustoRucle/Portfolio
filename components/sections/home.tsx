@@ -60,7 +60,7 @@ export default function Home() {
                     <div className="relative bg-gradient-to-br from-primary to-secondary p-1 rounded-full border-4 border-blue-900">
                         <div className="bg-background p-2 rounded-full">
                             <img
-                                src="./IMG_1225.jpg"
+                                src="./avatar_1.webp"
                                 alt="Augusto Ruiz - Frontend Developer"
                                 className="w-80 h-80 lg:w-110 lg:h-110 rounded-full object-cover"
                             />
