@@ -22,9 +22,9 @@ export default function Header() {
      */
     const downloadCV = () => {
         if (selectedLanguage === 'EN') {
-            downloadFile('CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', '/CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
+            downloadFile('CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', './CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
         } else {
-            downloadFile('CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', '/CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
+            downloadFile('CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', './CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
         }
     }
 
