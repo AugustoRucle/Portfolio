@@ -3,7 +3,7 @@ export default function AboutMe() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
             <img
-                src="/workspace-background-new.png"
+                src="./workspace-background-new.webp"
                 alt="Workspace background"
                 className="w-full h-full object-cover object-left"
             />
