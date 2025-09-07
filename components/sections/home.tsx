@@ -59,9 +59,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl scale-110"></div>
                     <div className="relative bg-gradient-to-br from-primary to-secondary p-1 rounded-full border-4 border-blue-900">
                         <div className="bg-background p-2 rounded-full">
-                            <img
-                                src="./avatar_2.webp"
-                                alt="Augusto Ruiz - Frontend Developer"
+                            <div
+                                style={{
+                                    backgroundImage: `url(./avatar_3.webp)`,
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
                                 className="w-80 h-80 lg:w-110 lg:h-110 rounded-full object-cover"
                             />
                         </div>
