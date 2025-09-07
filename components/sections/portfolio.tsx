@@ -161,6 +161,7 @@ export default function Portfolio() {
                     >
                         <div className='grow'>
                             <img
+                                loading="lazy"
                                 src={project.img.source}
                                 alt={project.img.alt}
                                 className="w-200 h-auto sm:h-auto md:h-auto xl:h-100 2xl:h-100 rounded object-fill"
@@ -208,6 +209,7 @@ export default function Portfolio() {
                                 {project.tools.map((tool) => (
                                     <div key={`${tool.imgAlt} - ${project.title}`} className='flex items-center space-x-2 grow'>
                                         <img
+                                            loading="lazy"
                                             src={tool.imgSrc}
                                             alt={tool.imgAlt}
                                             className={tool.imgClassName}
