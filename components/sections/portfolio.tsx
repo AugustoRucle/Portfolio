@@ -3,7 +3,7 @@ import { CalendarOutlined, GlobalOutlined, LaptopOutlined } from "@ant-design/ic
 const PROJECTS = [
     {
         img: {
-            source: './shedcloud.png',
+            source: './shedcloud_c.webp',
             alt: 'Shedcloud portal',
         },
         title: 'Shedcloud',
@@ -16,7 +16,7 @@ const PROJECTS = [
         description: 'A portal to manage quotes, sales orders, and work orders, as well as create and edit inventory and manage product locations for import and export.',
         tools: [
             {
-                imgSrc: './react.png',
+                imgSrc: './react.webp',
                 imgAlt: 'React logo',
                 imgClassName: 'w-auto h-5 rounded object-cover',
                 name: 'React'
@@ -24,23 +24,23 @@ const PROJECTS = [
             {
                 imgSrc: './javascript.webp',
                 imgAlt: 'Javascript logo',
-                imgClassName: 'w-auto h-8 rounded object-cover',
+                imgClassName: 'w-auto h-7 rounded object-cover',
                 name: 'Javascript'
             },
             {
-                imgSrc: './tailwind.png',
+                imgSrc: './tailwind.webp',
                 imgAlt: 'Tawilwind logo',
-                imgClassName: 'w-auto h-4 rounded object-cover',
+                imgClassName: 'w-auto h-6 rounded object-cover',
                 name: 'Tailwindcss'
             },
             {
-                imgSrc: './redux.png',
+                imgSrc: './redux.webp',
                 imgAlt: 'Redux logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
+                imgClassName: 'w-auto h-6 rounded object-cover',
                 name: 'Redux'
             },
             {
-                imgSrc: './amplify-logo.png',
+                imgSrc: './amplify-logo.webp',
                 imgAlt: 'Amplify logo',
                 imgClassName: 'w-auto h-5 rounded object-cover',
                 name: 'AWS Amplify'
@@ -59,7 +59,7 @@ const PROJECTS = [
     },
     {
         img: {
-            source: './3dportal.png',
+            source: './3dportal_c.webp',
             alt: '3D Shedcloud portal',
         },
         title: '3D Shedcloud portal',
@@ -72,7 +72,7 @@ const PROJECTS = [
         description: 'A website to configure shed buildings. Users can add and update walls, porches, roofs, building colors, and accessories, as well as create quotes, sales orders, and work orders. The system links each configuration with quotes, sales, and work orders, allowing users to continue editing at any stage.',
         tools: [
             {
-                imgSrc: './react.png',
+                imgSrc: './react.webp',
                 imgAlt: 'React logo',
                 imgClassName: 'w-auto h-5 rounded object-cover',
                 name: 'React'
@@ -84,13 +84,13 @@ const PROJECTS = [
                 name: 'Javascript'
             },
             {
-                imgSrc: './tailwind.png',
+                imgSrc: './tailwind.webp',
                 imgAlt: 'Tawilwind logo',
                 imgClassName: 'w-auto h-4 rounded object-cover',
                 name: 'Tailwindcss'
             },
             {
-                imgSrc: './amplify-logo.png',
+                imgSrc: './amplify-logo.webp',
                 imgAlt: 'Amplify logo',
                 imgClassName: 'w-auto h-5 rounded object-cover',
                 name: 'AWS Amplify'
