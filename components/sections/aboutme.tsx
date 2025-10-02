@@ -1,14 +1,21 @@
 import { FormattedMessage } from "react-intl";
+import Image from "next/image";
+
+import WorkspaceBackground from '../../public/workspace-background-new.webp';
+import AugustoPortrait from '../../public/augusto-portrait.png';
 
 export default function AboutMe() {
     return <section id="aboutme" className="relative py-50 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-            <img
+            <Image
                 loading="lazy"
-                src="./workspace-background-new.webp"
+                src={WorkspaceBackground}
                 alt="Workspace background"
                 className="w-full h-full object-cover object-left"
+                fill
+                sizes="100vw"
+                priority={false}
             />
             <div className="absolute inset-0 bg-neutral-900/85"></div>
         </div>
@@ -103,8 +110,8 @@ export default function AboutMe() {
                 <div className="flex justify-center lg:justify-end">
                     <div className="relative">
                         <div className="p-2 rounded-2xl shadow-2xl shadow-black/50">
-                            <img
-                                src="./augusto-portrait.png"
+                            <Image
+                                src={AugustoPortrait}
                                 alt="Augusto Ruiz Portrait"
                                 className="w-80 h-80 lg:w-96 lg:h-96 rounded-xl object-cover shadow-xl"
                             />

@@ -2,6 +2,22 @@ import { useLanguageContext } from "@/context/laguageContext";
 import { CalendarOutlined, GlobalOutlined, LaptopOutlined } from "@ant-design/icons";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
+import Image from "next/image";
+
+import ShedcloudImage from '../../public/shedcloud_c.webp';
+import ThreeDPortalImage from '../../public/3dportal_c.webp';
+import FacturatuTicketImage from '../../public/facturatuticket_with_bgc.webp';
+
+import ReactLogo from '../../public/react.webp';
+import JavascriptLogo from '../../public/javascript.webp';
+import TailwindLogo from '../../public/tailwind.webp';
+import ReduxLogo from '../../public/redux.webp';
+import AmplifyLogo from '../../public/amplify-logo.webp';
+import AntDesignLogo from '../../public/ant-design.webp';
+import ThreeJsLogo from '../../public/threejs-icon.png';
+import LaravelLogo from '../../public/lavarel.png';
+import VuejsLogo from '../../public/vuejslogo.png';
+import Css3Logo from '../../public/css3.png';
 
 export default function Portfolio() {
     const { language } = useLanguageContext();
@@ -9,7 +25,7 @@ export default function Portfolio() {
     const PROJECTS = useMemo(() => [
         {
             img: {
-                source: './shedcloud_c.webp',
+                source: ShedcloudImage,
                 alt: 'Shedcloud portal',
             },
             title: 'Shedcloud',
@@ -31,37 +47,37 @@ export default function Portfolio() {
             ],
             tools: [
                 {
-                    imgSrc: './react.webp',
+                    imgSrc: ReactLogo,
                     imgAlt: 'React logo',
                     imgClassName: 'w-auto h-5 rounded object-cover',
                     name: 'React'
                 },
                 {
-                    imgSrc: './javascript.webp',
+                    imgSrc: JavascriptLogo,
                     imgAlt: 'Javascript logo',
                     imgClassName: 'w-auto h-7 rounded object-cover',
                     name: 'Javascript'
                 },
                 {
-                    imgSrc: './tailwind.webp',
+                    imgSrc: TailwindLogo,
                     imgAlt: 'Tawilwind logo',
                     imgClassName: 'w-auto h-6 rounded object-cover',
                     name: 'Tailwindcss'
                 },
                 {
-                    imgSrc: './redux.webp',
+                    imgSrc: ReduxLogo,
                     imgAlt: 'Redux logo',
                     imgClassName: 'w-auto h-6 rounded object-cover',
                     name: 'Redux'
                 },
                 {
-                    imgSrc: './amplify-logo.webp',
+                    imgSrc: AmplifyLogo,
                     imgAlt: 'Amplify logo',
                     imgClassName: 'w-auto h-5 rounded object-cover',
                     name: 'AWS Amplify'
                 },
                 {
-                    imgSrc: './ant-design.webp',
+                    imgSrc: AntDesignLogo,
                     imgAlt: 'Ant design logo',
                     imgClassName: 'w-auto h-6 rounded object-cover',
                     name: 'Ant design'
@@ -74,7 +90,7 @@ export default function Portfolio() {
         },
         {
             img: {
-                source: './3dportal_c.webp',
+                source: ThreeDPortalImage,
                 alt: '3D Shedcloud portal',
             },
             title: '3D Shedcloud portal',
@@ -95,31 +111,31 @@ export default function Portfolio() {
             ],
             tools: [
                 {
-                    imgSrc: './react.webp',
+                    imgSrc: ReactLogo,
                     imgAlt: 'React logo',
                     imgClassName: 'w-auto h-5 rounded object-cover',
                     name: 'React'
                 },
                 {
-                    imgSrc: './javascript.webp',
+                    imgSrc: JavascriptLogo,
                     imgAlt: 'Javascript logo',
                     imgClassName: 'w-auto h-8 rounded object-cover',
                     name: 'Javascript'
                 },
                 {
-                    imgSrc: './tailwind.webp',
+                    imgSrc: TailwindLogo,
                     imgAlt: 'Tawilwind logo',
                     imgClassName: 'w-auto h-4 rounded object-cover',
                     name: 'Tailwindcss'
                 },
                 {
-                    imgSrc: './amplify-logo.webp',
+                    imgSrc: AmplifyLogo,
                     imgAlt: 'Amplify logo',
                     imgClassName: 'w-auto h-5 rounded object-cover',
                     name: 'AWS Amplify'
                 },
                 {
-                    imgSrc: './threejs-icon.png',
+                    imgSrc: ThreeJsLogo,
                     imgAlt: 'Three js logo',
                     imgClassName: 'w-auto h-6 rounded object-cover',
                     name: 'Three JS'
@@ -132,7 +148,7 @@ export default function Portfolio() {
         },
         {
             img: {
-                source: './facturatuticket_with_bgc.webp',
+                source: FacturatuTicketImage,
                 alt: 'Factura tu ticket portal',
             },
             title: 'Factura tu ticket',
@@ -141,7 +157,7 @@ export default function Portfolio() {
                 link: 'https://www1.realhost.com.mx',
                 name: 'realhost.com.mx'
             },
-            date: 'January - November 2020',
+            date: <FormattedMessage id="experenceFacturatuticketDate" />,
             shortDescription: language
                 ? <FormattedMessage id="experenceFacturatuticketShortDescription" />
                 : <FormattedMessage id="experenceFacturatuticketShortDescription" />,
@@ -154,19 +170,19 @@ export default function Portfolio() {
             ],
             tools: [
                 {
-                    imgSrc: './lavarel.png',
+                    imgSrc: LaravelLogo,
                     imgAlt: 'Laravel logo',
                     imgClassName: 'w-auto h-8 rounded object-cover',
                     name: 'Laravel'
                 },
                 {
-                    imgSrc: './vuejslogo.png',
+                    imgSrc: VuejsLogo,
                     imgAlt: 'Vuejs logo',
                     imgClassName: 'w-auto h-5 rounded object-cover',
                     name: 'Vue JS'
                 },
                 {
-                    imgSrc: './css3.png',
+                    imgSrc: Css3Logo,
                     imgAlt: 'CSS3 logo',
                     imgClassName: 'w-auto h-8 rounded object-cover',
                     name: 'CSS3'
@@ -193,7 +209,7 @@ export default function Portfolio() {
                         className='flex flex-col sm:flex-col md:flex-col xl:flex-row 2xl:flex-row items-center space-y-10 sm:space-y-10 md:space-y-10 xl:space-y-0 2xl:space-y-0  space-x-5 sm:space-x-5 md:space-x-5 xl:space-x-18 2xl:space-x-18'
                     >
                         <div className='grow'>
-                            <img
+                            <Image
                                 loading="lazy"
                                 src={project.img.source}
                                 alt={project.img.alt}
@@ -211,7 +227,7 @@ export default function Portfolio() {
 
                                 {project.active && (
                                     <p className='px-6 text-blue-500 font-extrabold text-lg'>
-                                        Present
+                                        <FormattedMessage id="present" />
                                     </p>
                                 )}
                             </div>
@@ -247,7 +263,7 @@ export default function Portfolio() {
                             <div className='flex flex-wrap grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-5 w-full'>
                                 {project.tools.map((tool) => (
                                     <div key={`${tool.imgAlt} - ${project.title}`} className='flex items-center space-x-2 grow'>
-                                        <img
+                                        <Image
                                             loading="lazy"
                                             src={tool.imgSrc}
                                             alt={tool.imgAlt}
