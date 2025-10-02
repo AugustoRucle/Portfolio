@@ -1,40 +1,51 @@
 export default function SkillCard({
-    icon,
+    Icon,
     name,
     category,
     percentage,
     color,
-    textColor,
 }: {
-    icon: string
+    Icon: any
     name: string
     category: string
     percentage: number
     color: string
-    textColor: string
 }) {
     return (
-        <div className="bg-neutral-800/50 rounded-xl p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-            <div className="flex items-center space-x-4 mb-4">
+        <div className="group relative bg-radial-[at_50%_50%] from-neutral-900 to-white to-1100% rounded-xl p-6 shadow-xl border border-neutral-900 hover:scale-110 transform transition-transform duration-300">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+                <rect
+                    className="stroke-yellow-600 fill-none transition-all duration-800 [stroke-dasharray:0_1000] group-hover:[stroke-dasharray:1000_0]"
+                    x="1"
+                    y="1"
+                    width="calc(100% - 2px)"
+                    height="calc(100% - 2px)"
+                    rx="12"
+                    strokeWidth="2"
+                    pathLength="1000"
+                    strokeDashoffset="0"
+                />
+            </svg>
+            <div className="flex flex-col items-center justify-center space-x-4 space-y-4 mb-6 relative z-10">
                 <div
-                    className={`w-12 h-12 ${color} ${textColor} rounded-lg flex items-center justify-center font-bold text-lg`}
+                    className={`w-20 h-20 rounded-lg flex items-center justify-center font-bold text-lg`}
                 >
-                    {icon}
+                    <Icon className='text-blue-500 group-hover:text-yellow-500' />
                 </div>
                 <div>
-                    <h3 className="text-lg font-heading font-bold text-white">{name}</h3>
-                    <p className="text-sm text-muted-foreground font-sans">{category}</p>
+                    <p className="group-hover:text-yellow-500 text-2xl font-heading font-bold text-white text-center">{name}</p>
+                    <p className="group-hover:text-yellow-500 text-sm text-muted-foreground font-sans text-center">{category}</p>
                 </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 relative z-10">
                 <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground font-sans">Progress</span>
-                    <span className="text-sm font-semibold text-blue-500 font-sans">{percentage}%</span>
+                    <span className="text-sm text-white group-hover:text-yellow-500 font-sans">Progress</span>
+                    <span className="text-sm font-semibold text-blue-500 group-hover:text-yellow-500 font-sans">{percentage}%</span>
                 </div>
                 <div className="w-full bg-neutral-700 rounded-full h-2">
                     <div
-                        className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-blue-700 group-hover:bg-yellow-500 h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${percentage}%` }}
                     ></div>
                 </div>

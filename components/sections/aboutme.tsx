@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 export default function AboutMe() {
     return <section id="aboutme" className="relative py-50 overflow-hidden">
         {/* Background Image with Overlay */}
@@ -15,88 +17,89 @@ export default function AboutMe() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
-                    <h2 className="text-5xl font-heading font-black text-white mb-8">About me</h2>
+                    <h2 className="text-5xl font-heading font-black text-white">
+                        <FormattedMessage id="aboutMeTitle" />
+                    </h2>
 
-                    <div className="space-y-6">
-                        <p className="text-lg text-muted-foreground leading-relaxed font-sans">
-                            Hello, my name is <span className="text-blue-500 font-semibold">Augusto Ruiz</span> and I am a{" "}
-                            <span className="text-blue-600 font-bold">Frontend Developer</span> from{" "}
-                            <span className="text-blue-500 font-semibold">Chiapas, Mexico</span> with over {" "}
-                            <span className="text-blue-500 font-bold">6 years</span> of experience building web applications
+                    <div className="space-y-15 pt-3">
+                        <p className="text-lg text-muted-foreground leading-relaxed font-sans text-justify">
+                            <FormattedMessage id="aboutMeDescription" />
                         </p>
 
                         <h3 className="text-2xl font-heading font-bold text-white mb-4">
-                            Throughout my career, I have:
+                            <FormattedMessage id="aboutMeThroughouMyCareer" />:
                         </h3>
 
                         <ul className="w-full list-disc space-y-4 pl-4 marker:text-blue-500 marker:text-xl">
                             <li className="text-muted-foreground font-sans text-justify">
                                 <span className="text-blue-500 font-semibold">
-                                    Lead frontend development
+                                    <FormattedMessage id="aboutMeLeadFrontend1" />
                                 </span>{" "}
-                                in 4 projects, taking ownership from planning to deployment.
+                                <FormattedMessage id="aboutMeLeadFrontend2" />
                             </li>
 
                             <li className="text-muted-foreground font-sans text-justify">
                                 <span className="text-blue-500 font-semibold">
-                                    Supervised and mentored junior developers,
+                                    <FormattedMessage id="aboutMeSupervisedJunior1" />
                                 </span>{" "}
-                                ensuring code quality and best practices.
+                                <FormattedMessage id="aboutMeSupervisedJunior2" />
                             </li>
 
                             <li className="text-muted-foreground font-sans text-justify">
-                                Taken the role of{" "}
+                                <FormattedMessage id="aboutMeTakeUXRole1" />{" "}
                                 <span className="text-blue-500 font-semibold">
-                                    UX/UI designer,
+                                    <FormattedMessage id="aboutMeTakeUXRole2" />
                                 </span>{" "}
-                                creating user-friendly and visually appealing interfaces.
+                                <FormattedMessage id="aboutMeTakeUXRole3" />
                             </li>
 
                             <li className="text-muted-foreground font-sans text-justify">
-                                Developed{" "}
+                                <FormattedMessage id="aboutMeDevelopLandingPage1" />{" "}
                                 <span className="text-blue-500 font-semibold">
-                                    multiple landing pages
+                                    <FormattedMessage id="aboutMeDevelopLandingPage2" />
                                 </span>
-                                {" "} optimized for performance and conversions.
+                                {" "} <FormattedMessage id="aboutMeDevelopLandingPage3" />
                             </li>
 
                             <li className="text-muted-foreground font-sans text-justify">
-                                Collaborated directly with clients to {" "}
+                                <FormattedMessage id="aboutMeCollaboredClients1" /> {" "}
                                 <span className="text-blue-500 font-semibold">
-                                    gather requirements
+                                    <FormattedMessage id="aboutMeCollaboredClients2" />
                                 </span>
-                                {" "} and translate them into scalable solutions.
+                                {" "}  <FormattedMessage id="aboutMeCollaboredClients3" />
                             </li>
 
                             <li className="text-muted-foreground font-sans text-justify">
+                                <FormattedMessage id="aboutMeSupporteApplication1" /> {" "}
                                 <span className="text-blue-500 font-semibold">
-                                    Supported application deployments
+                                    <FormattedMessage id="aboutMeSupporteApplication2" />
                                 </span>
-                                {" "}and{" "}
+                                {" "} <FormattedMessage id="aboutMeSupporteApplication3" />{" "}
                                 <span className="text-blue-500 font-semibold">
-                                    upervised team code changes before release
+                                    <FormattedMessage id="aboutMeSupporteApplication4" />
                                 </span>
-                                {" "}to production.
+                                {" "}<FormattedMessage id="aboutMeSupporteApplication5" />
                             </li>
                         </ul>
 
-                        <div className="pt-6">
-                            <h3 className="text-2xl font-heading font-bold text-white mb-4">Interests</h3>
+                        <div className="">
+                            <h3 className="text-2xl font-heading font-bold text-white mb-4">
+                                <FormattedMessage id="aboutMeIntereses" />
+                            </h3>
 
                             <ul className="w-full list-disc space-y-4 pl-4 marker:text-blue-500 marker:text-xl">
                                 <li className="text-muted-foreground font-sans text-justify">
-                                    Becoming a full-stack engineer
+                                    <FormattedMessage id="aboutMeIntereses1" />
                                 </li>
 
                                 <li className="text-muted-foreground font-sans text-justify">
-                                    Applying artificial intelligence to real-world projects
+                                    <FormattedMessage id="aboutMeIntereses2" />
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Right Content - Portrait Image */}
                 <div className="flex justify-center lg:justify-end">
                     <div className="relative">
                         <div className="p-2 rounded-2xl shadow-2xl shadow-black/50">

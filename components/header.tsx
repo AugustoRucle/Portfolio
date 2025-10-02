@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { downloadFile, scrollToSection } from '@/utils/functions';
 
@@ -8,11 +8,13 @@ import { AlipayOutlined, AuditOutlined, CalendarOutlined, CloseOutlined, FileTex
 
 import MobileNavItem from './mobileNavItem';
 import NavItem from "./navItem";
+import { LanguageContext, useLanguageContext } from '@/context/laguageContext';
 
 export default function Header() {
+    const { language, setLanguage } = useLanguageContext();
+
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState("EN");
     const [currentSection, setCurrentSection] = useState("home");
 
     /**
@@ -21,7 +23,7 @@ export default function Header() {
      * @return
      */
     const downloadCV = () => {
-        if (selectedLanguage === 'EN') {
+        if (language === 'EN') {
             downloadFile('CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', './CV_ENGLISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
         } else {
             downloadFile('CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf', './CV_SPANISH_JOSE_AUGUSTO_RUIZ_CLEMENTE.pdf')
@@ -66,7 +68,7 @@ export default function Header() {
      * @returns {void}
      */
     const handleLanguageChange = (language: string): void => {
-        setSelectedLanguage(language)
+        setLanguage(language)
         setIsLanguageDropdownOpen(false)
     }
 
@@ -108,41 +110,41 @@ export default function Header() {
                         onClick={() => navigateToSection('home')}
                         active={currentSection === 'home'}
                         icon={HomeOutlined}
-                        label="Home"
+                        labelId="headerHome"
                     />
 
                     <NavItem
                         onClick={() => navigateToSection('aboutme')}
                         active={currentSection === 'aboutme'}
                         icon={UserOutlined}
-                        label="About me"
+                        labelId="headerAboutMe"
                     />
 
                     <NavItem
                         onClick={() => navigateToSection('portfolio')}
                         active={currentSection === 'portfolio'}
                         icon={AuditOutlined}
-                        label="Portfolio"
+                        labelId="headerPortfolio"
                     />
 
                     <NavItem
                         onClick={() => navigateToSection('skills')}
                         active={currentSection === 'skills'}
                         icon={StarOutlined}
-                        label="Skills"
+                        labelId="headerSkills"
                     />
 
                     <NavItem
                         onClick={() => navigateToSection('experience')}
                         active={currentSection === 'experience'}
                         icon={CalendarOutlined}
-                        label="Experience"
+                        labelId="headerExperience"
                     />
 
                     <NavItem
                         onClick={downloadCV}
                         icon={FileTextOutlined}
-                        label={`CV (${selectedLanguage})`}
+                        label={`CV (${language})`}
                     />
 
                     <div className="relative">
@@ -153,7 +155,7 @@ export default function Header() {
                             <AlipayOutlined className="w-4 h-4" />
 
                             <span className="text-sm font-heading">
-                                {selectedLanguage}
+                                {language}
                             </span>
 
                             <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,14 +167,14 @@ export default function Header() {
                             <div className="absolute top-full right-0 mt-2 w-24 bg-neutral-800 border border-gray-700 rounded-lg shadow-lg z-50">
                                 <button
                                     onClick={() => handleLanguageChange("EN")}
-                                    className={`w-full px-3 py-2 text-left text-sm font-heading hover:bg-white/10 transition-colors rounded-t-lg ${selectedLanguage === "EN" ? "text-blue-500 bg-blue-500/10" : "text-white"}`}
+                                    className={`w-full px-3 py-2 text-left text-sm font-heading hover:bg-white/10 transition-colors rounded-t-lg ${language === "EN" ? "text-blue-500 bg-blue-500/10" : "text-white"}`}
                                 >
                                     EN
                                 </button>
 
                                 <button
                                     onClick={() => handleLanguageChange("ES")}
-                                    className={`w-full px-3 py-2 text-left text-sm font-heading hover:bg-white/10 transition-colors rounded-b-lg ${selectedLanguage === "ES" ? "text-blue-500 bg-blue-500/10" : "text-white"}`}
+                                    className={`w-full px-3 py-2 text-left text-sm font-heading hover:bg-white/10 transition-colors rounded-b-lg ${language === "ES" ? "text-blue-500 bg-blue-500/10" : "text-white"}`}
                                 >
                                     ES
                                 </button>
@@ -246,7 +248,7 @@ export default function Header() {
                         <MobileNavItem
                             onClick={downloadCV}
                             icon={FileTextOutlined}
-                            label={`CV (${selectedLanguage})`}
+                            label={`CV (${language})`}
                         />
 
                         <div className="pt-4 border-t border-gray-700">
@@ -262,7 +264,7 @@ export default function Header() {
                                             handleLanguageChange("EN")
                                             closeMobileMenu()
                                         }}
-                                        className={`w-full text-left px-4 py-2 rounded-lg transition-colors font-heading ${selectedLanguage === "EN"
+                                        className={`w-full text-left px-4 py-2 rounded-lg transition-colors font-heading ${language === "EN"
                                             ? "text-blue-500 bg-blue-500/10"
                                             : "text-white/80 hover:text-white hover:bg-white/10"
                                             }`}
@@ -275,7 +277,7 @@ export default function Header() {
                                             handleLanguageChange("ES")
                                             closeMobileMenu()
                                         }}
-                                        className={`w-full text-left    px-4 py-2 rounded-lg transition-colors font-heading ${selectedLanguage === "ES"
+                                        className={`w-full text-left    px-4 py-2 rounded-lg transition-colors font-heading ${language === "ES"
                                             ? "text-blue-500 bg-blue-500/10"
                                             : "text-white/80 hover:text-white hover:bg-white/10"
                                             }`}

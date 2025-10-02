@@ -1,17 +1,21 @@
 "use client"
 
+import { FormattedMessage } from "react-intl"
+
 export default function NavItem({
     icon: Icon,
     active = false,
     onClick = () => { },
     href = '',
+    labelId = '',
     label = '',
 }: {
     icon: any
     active?: boolean
     scrollToSectionId?: string,
     href?: string
-    label: string
+    labelId?: string
+    label?: string
     onClick?: () => void
 }) {
     return <a
@@ -22,9 +26,10 @@ export default function NavItem({
         <Icon className="w-4 h-4" />
 
         <span className="text-sm font-medium font-heading">
+            {labelId && <FormattedMessage id={labelId} />}
             {label}
         </span>
 
-        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+        <div className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full ${active && 'w-full'}`} />
     </a>
 }

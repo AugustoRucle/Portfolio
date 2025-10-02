@@ -1,4 +1,5 @@
 import { GlobalOutlined } from "@ant-design/icons"
+import { ReactNode } from "react"
 
 export default function ExperienceCard({
     company,
@@ -9,7 +10,7 @@ export default function ExperienceCard({
 }: {
     company: string
     website: string
-    period: string
+    period: ReactNode
     logo: string
     isActive: boolean
 }) {

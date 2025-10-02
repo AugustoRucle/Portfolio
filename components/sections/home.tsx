@@ -2,47 +2,61 @@ import { GithubOutlined, LinkedinOutlined, RightOutlined } from "@ant-design/ico
 
 import SocialLink from "../socialLink";
 import { scrollToSection } from "@/utils/functions";
-
-const Braces = () => <div />
-const Code2 = () => <div />
-const FileCode = () => <div />
-const Layers = () => <div />
-const Zap = () => <div />
+import { FormattedMessage, useIntl } from "react-intl";
+import Typewriter from "../typewriter";
+import { useMemo } from "react";
+import { useLanguageContext } from "@/context/laguageContext";
 
 export default function Home() {
+    const { language } = useLanguageContext();
+    const intl = useIntl();
+
+    const frontendDeveloperText = intl.formatMessage({ id: "frontendDeveloper", })
+
     return <div id="home" className="container mx-auto px-6 py-30">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
             {/* Left Content */}
-            <div className="space-y-8">
-                <div className="space-y-4">
-                    <h1 className="text-5xl lg:text-6xl font-heading font-black">
-                        <span className="text-muted-foreground text-lg font-mono block mb-2">Hello, my name is</span>
-                        <span className="text-blue-500 text-4xl font-heading">Augusto Ruiz</span>
-                    </h1>
-                </div>
+            <div className="space-y-10">
+                <h1 className="text-5xl lg:text-6xl font-heading font-black">
+                    <span className="text-muted-foreground text-lg font-mono block mb-1">
+                        <FormattedMessage id="helloMyNameIs" />
+                    </span>
+                    <Typewriter
+                        key={language}
+                        hideCursorOnComplete
+                        text="Augusto Ruiz"
+                        speed={100}
+                        delay={100}
+                        className="text-5xl font-heading font-extralight text-blue-600"
+                    />
+                </h1>
 
                 {/* Role heading */}
-                <div className="space-y-2">
-                    <h2 className="text-6xl font-heading font-extralight text-blue-600 whitespace-normal sm:whitespace-normal md:whitespace-nowrap xl:text-nowrap 2xl:whitespace-nowrap">
-                        Frontend Developer
-                    </h2>
-                </div>
 
-                {/* Description paragraph */}
-                <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground leading-relaxed text-justify font-sans">
-                        Experienced frontend developer passionate about creating exceptional user experiences with modern web
-                        technologies. Specialized in React, TypeScript, and cutting-edge frameworks.
-                    </p>
-                </div>
+                <h2 className="text-5xl font-heading font-extralight text-blue-600 whitespace-normal sm:whitespace-normal md:whitespace-nowrap xl:text-nowrap 2xl:whitespace-nowrap">
+                    <span className="text-4xl text-white font-heading">
+                        <FormattedMessage id="iAm" />
+                    </span>
+                    {" "}
+                    <Typewriter
+                        key={language}
+                        text={frontendDeveloperText}
+                        speed={94}
+                        delay={1500}
+                        className="text-5xl font-heading font-extralight text-blue-600"
+                    />
+                </h2>
 
-                {/* CTA Button */}
+                <p className="text-lg text-muted-foreground leading-relaxed text-justify font-sans">
+                    <FormattedMessage id="experenceDetails" />
+                </p>
+
                 <div className="pt-6">
                     <button
                         onClick={() => scrollToSection('portfolio')}
                         className="rounded w-full sm:w-full md:w-auto lg:w-auto xl:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg group transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-inner hover:shadow-black/30 font-heading"
                     >
-                        Explore My Work
+                        <FormattedMessage id="exploreMyWork" />
                         <RightOutlined className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>

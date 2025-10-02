@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Montserrat, Poppins } from "next/font/google"
 import "./globals.css"
+import { LanguageContextProvider } from "@/context/laguageContext"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Augusto Ruiz - Frontend Developer",
   description: "Experienced Frontend Developer specializing in modern web technologies",
-  generator: "v0.app",
+  generator: "0.1.0",
 }
 
 export default function RootLayout({
@@ -34,7 +35,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${montserrat.variable} ${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} ${poppins.variable} antialiased`}>
+        <LanguageContextProvider>
+          {children}
+        </LanguageContextProvider>
+      </body>
     </html>
   )
 }

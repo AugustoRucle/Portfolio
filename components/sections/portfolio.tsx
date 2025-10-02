@@ -1,156 +1,189 @@
+import { useLanguageContext } from "@/context/laguageContext";
 import { CalendarOutlined, GlobalOutlined, LaptopOutlined } from "@ant-design/icons";
-
-const PROJECTS = [
-    {
-        img: {
-            source: './shedcloud_c.webp',
-            alt: 'Shedcloud portal',
-        },
-        title: 'Shedcloud',
-        active: true,
-        company: {
-            link: 'https://www1.realhost.com.mx',
-            name: 'realhost.com.mx'
-        },
-        date: '2021-2025',
-        description: 'A portal to manage quotes, sales orders, and work orders, as well as create and edit inventory and manage product locations for import and export.',
-        tools: [
-            {
-                imgSrc: './react.webp',
-                imgAlt: 'React logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
-                name: 'React'
-            },
-            {
-                imgSrc: './javascript.webp',
-                imgAlt: 'Javascript logo',
-                imgClassName: 'w-auto h-7 rounded object-cover',
-                name: 'Javascript'
-            },
-            {
-                imgSrc: './tailwind.webp',
-                imgAlt: 'Tawilwind logo',
-                imgClassName: 'w-auto h-6 rounded object-cover',
-                name: 'Tailwindcss'
-            },
-            {
-                imgSrc: './redux.webp',
-                imgAlt: 'Redux logo',
-                imgClassName: 'w-auto h-6 rounded object-cover',
-                name: 'Redux'
-            },
-            {
-                imgSrc: './amplify-logo.webp',
-                imgAlt: 'Amplify logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
-                name: 'AWS Amplify'
-            },
-            {
-                imgSrc: './ant-design.webp',
-                imgAlt: 'Ant design logo',
-                imgClassName: 'w-auto h-6 rounded object-cover',
-                name: 'Ant design'
-            }
-        ],
-        website: {
-            link: 'https://io.shedcloud.com/',
-            name: 'io.shedcloud.com',
-        },
-    },
-    {
-        img: {
-            source: './3dportal_c.webp',
-            alt: '3D Shedcloud portal',
-        },
-        title: '3D Shedcloud portal',
-        active: true,
-        company: {
-            link: 'https://www1.realhost.com.mx',
-            name: 'realhost.com.mx'
-        },
-        date: '2021-2025',
-        description: 'A website to configure shed buildings. Users can add and update walls, porches, roofs, building colors, and accessories, as well as create quotes, sales orders, and work orders. The system links each configuration with quotes, sales, and work orders, allowing users to continue editing at any stage.',
-        tools: [
-            {
-                imgSrc: './react.webp',
-                imgAlt: 'React logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
-                name: 'React'
-            },
-            {
-                imgSrc: './javascript.webp',
-                imgAlt: 'Javascript logo',
-                imgClassName: 'w-auto h-8 rounded object-cover',
-                name: 'Javascript'
-            },
-            {
-                imgSrc: './tailwind.webp',
-                imgAlt: 'Tawilwind logo',
-                imgClassName: 'w-auto h-4 rounded object-cover',
-                name: 'Tailwindcss'
-            },
-            {
-                imgSrc: './amplify-logo.webp',
-                imgAlt: 'Amplify logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
-                name: 'AWS Amplify'
-            },
-            {
-                imgSrc: './threejs-icon.png',
-                imgAlt: 'Three js logo',
-                imgClassName: 'w-auto h-6 rounded object-cover',
-                name: 'Three JS'
-            }
-        ],
-        website: {
-            link: 'https://barnssheds.shedcloud.com/configurator/6529b409e7d0f84e18e2a108',
-            name: 'barnssheds.shedcloud.com',
-        },
-    },
-    {
-        img: {
-            source: './facturatuticket.png',
-            alt: 'Factura tu ticket portal',
-        },
-        title: 'Factura tu ticket',
-        active: true,
-        company: {
-            link: 'https://www1.realhost.com.mx',
-            name: 'realhost.com.mx'
-        },
-        date: 'January - November 2020',
-        description: "A web platform to manage invoices for Realhost's companies. It allows any related company to access the website, add invoice details, and generate completed invoices.",
-        tools: [
-            {
-                imgSrc: './lavarel.png',
-                imgAlt: 'Laravel logo',
-                imgClassName: 'w-auto h-8 rounded object-cover',
-                name: 'Laravel'
-            },
-            {
-                imgSrc: './vuejslogo.png',
-                imgAlt: 'Vuejs logo',
-                imgClassName: 'w-auto h-5 rounded object-cover',
-                name: 'Vue JS'
-            },
-            {
-                imgSrc: './css3.png',
-                imgAlt: 'CSS3 logo',
-                imgClassName: 'w-auto h-8 rounded object-cover',
-                name: 'CSS3'
-            },
-        ],
-        website: {
-            link: 'https://www.facturatuticket.com/',
-            name: 'facturatuticket.com',
-        },
-    }
-];
+import { useMemo } from "react";
+import { FormattedMessage } from "react-intl";
 
 export default function Portfolio() {
-    return <section id='portfolio' className="py-20 bg-neutral-900">
+    const { language } = useLanguageContext();
+
+    const PROJECTS = useMemo(() => [
+        {
+            img: {
+                source: './shedcloud_c.webp',
+                alt: 'Shedcloud portal',
+            },
+            title: 'Shedcloud',
+            active: true,
+            company: {
+                link: 'https://www1.realhost.com.mx',
+                name: 'realhost.com.mx'
+            },
+            date: '2021-2025',
+            shortDescription: language
+                ? <FormattedMessage id="experenceShedcloudShortDescription" />
+                : <FormattedMessage id="experenceShedcloudShortDescription" />,
+            tasks: [
+                <FormattedMessage id="experenceShedcloudTask1" />,
+                <FormattedMessage id="experenceShedcloudTask2" />,
+                <FormattedMessage id="experenceShedcloudTask3" />,
+                <FormattedMessage id="experenceShedcloudTask4" />,
+                <FormattedMessage id="experenceShedcloudTask5" />
+            ],
+            tools: [
+                {
+                    imgSrc: './react.webp',
+                    imgAlt: 'React logo',
+                    imgClassName: 'w-auto h-5 rounded object-cover',
+                    name: 'React'
+                },
+                {
+                    imgSrc: './javascript.webp',
+                    imgAlt: 'Javascript logo',
+                    imgClassName: 'w-auto h-7 rounded object-cover',
+                    name: 'Javascript'
+                },
+                {
+                    imgSrc: './tailwind.webp',
+                    imgAlt: 'Tawilwind logo',
+                    imgClassName: 'w-auto h-6 rounded object-cover',
+                    name: 'Tailwindcss'
+                },
+                {
+                    imgSrc: './redux.webp',
+                    imgAlt: 'Redux logo',
+                    imgClassName: 'w-auto h-6 rounded object-cover',
+                    name: 'Redux'
+                },
+                {
+                    imgSrc: './amplify-logo.webp',
+                    imgAlt: 'Amplify logo',
+                    imgClassName: 'w-auto h-5 rounded object-cover',
+                    name: 'AWS Amplify'
+                },
+                {
+                    imgSrc: './ant-design.webp',
+                    imgAlt: 'Ant design logo',
+                    imgClassName: 'w-auto h-6 rounded object-cover',
+                    name: 'Ant design'
+                }
+            ],
+            website: {
+                link: 'https://io.shedcloud.com/',
+                name: 'io.shedcloud.com',
+            },
+        },
+        {
+            img: {
+                source: './3dportal_c.webp',
+                alt: '3D Shedcloud portal',
+            },
+            title: '3D Shedcloud portal',
+            active: true,
+            company: {
+                link: 'https://www1.realhost.com.mx',
+                name: 'realhost.com.mx'
+            },
+            date: '2021-2025',
+            shortDescription: language
+                ? <FormattedMessage id="experence3DportalShortDescription" />
+                : <FormattedMessage id="experence3DportalShortDescription" />,
+            tasks: [
+                <FormattedMessage id="experence3DportalTask1" />,
+                <FormattedMessage id="experence3DportalTask2" />,
+                <FormattedMessage id="experence3DportalTask3" />,
+                <FormattedMessage id="experence3DportalTask4" />,
+            ],
+            tools: [
+                {
+                    imgSrc: './react.webp',
+                    imgAlt: 'React logo',
+                    imgClassName: 'w-auto h-5 rounded object-cover',
+                    name: 'React'
+                },
+                {
+                    imgSrc: './javascript.webp',
+                    imgAlt: 'Javascript logo',
+                    imgClassName: 'w-auto h-8 rounded object-cover',
+                    name: 'Javascript'
+                },
+                {
+                    imgSrc: './tailwind.webp',
+                    imgAlt: 'Tawilwind logo',
+                    imgClassName: 'w-auto h-4 rounded object-cover',
+                    name: 'Tailwindcss'
+                },
+                {
+                    imgSrc: './amplify-logo.webp',
+                    imgAlt: 'Amplify logo',
+                    imgClassName: 'w-auto h-5 rounded object-cover',
+                    name: 'AWS Amplify'
+                },
+                {
+                    imgSrc: './threejs-icon.png',
+                    imgAlt: 'Three js logo',
+                    imgClassName: 'w-auto h-6 rounded object-cover',
+                    name: 'Three JS'
+                }
+            ],
+            website: {
+                link: 'https://barnssheds.shedcloud.com/configurator/6529b409e7d0f84e18e2a108',
+                name: 'barnssheds.shedcloud.com',
+            },
+        },
+        {
+            img: {
+                source: './facturatuticket_with_bgc.webp',
+                alt: 'Factura tu ticket portal',
+            },
+            title: 'Factura tu ticket',
+            active: true,
+            company: {
+                link: 'https://www1.realhost.com.mx',
+                name: 'realhost.com.mx'
+            },
+            date: 'January - November 2020',
+            shortDescription: language
+                ? <FormattedMessage id="experenceFacturatuticketShortDescription" />
+                : <FormattedMessage id="experenceFacturatuticketShortDescription" />,
+            tasks: [
+                <FormattedMessage id="experenceFacturatuticketTask1" />,
+                <FormattedMessage id="experenceFacturatuticketTask2" />,
+                <FormattedMessage id="experenceFacturatuticketTask3" />,
+                <FormattedMessage id="experenceFacturatuticketTask4" />,
+                <FormattedMessage id="experenceFacturatuticketTask5" />,
+            ],
+            tools: [
+                {
+                    imgSrc: './lavarel.png',
+                    imgAlt: 'Laravel logo',
+                    imgClassName: 'w-auto h-8 rounded object-cover',
+                    name: 'Laravel'
+                },
+                {
+                    imgSrc: './vuejslogo.png',
+                    imgAlt: 'Vuejs logo',
+                    imgClassName: 'w-auto h-5 rounded object-cover',
+                    name: 'Vue JS'
+                },
+                {
+                    imgSrc: './css3.png',
+                    imgAlt: 'CSS3 logo',
+                    imgClassName: 'w-auto h-8 rounded object-cover',
+                    name: 'CSS3'
+                },
+            ],
+            website: {
+                link: 'https://www.facturatuticket.com/',
+                name: 'facturatuticket.com',
+            },
+        }
+    ], [language]);
+
+    return <section id='portfolio' className="py-20">
         <div className="container mx-auto px-6">
-            <h2 className="text-5xl font-heading font-black text-white mb-16 text-center">Portfolio</h2>
+            <h2 className="text-5xl font-heading font-black text-white mb-16 text-center">
+                <FormattedMessage id="portfolio" />
+            </h2>
 
             <div className='space-y-30'>
 
@@ -164,11 +197,11 @@ export default function Portfolio() {
                                 loading="lazy"
                                 src={project.img.source}
                                 alt={project.img.alt}
-                                className="w-200 h-auto sm:h-auto md:h-auto xl:h-100 2xl:h-100 rounded object-fill"
+                                className="w-200 h-auto sm:h-auto md:h-auto xl:h-100 2xl:h-90 rounded object-fill"
                             />
                         </div>
 
-                        <div className='flex flex-col items-start space-y-5 w-full sm:w-full md:w-200 xl:w-200 2xl:w-200'>
+                        <div className='flex flex-col items-start space-y-5 w-full sm:w-full md:w-220 xl:w-220 2xl:w-220'>
                             <div className='flex items-center justify-between w-full'>
                                 {project.title && (
                                     <p className='text-white text-3xl font-light'>
@@ -201,9 +234,15 @@ export default function Portfolio() {
                             </div>
 
                             {/* shadow-xl/30 shadow-blue-500/30  */}
-                            <p className='bg-neutral-800 px-8 py-6 rounded text-sm text-justify'>
-                                {project.description}
-                            </p>
+                            <div className='bg-neutral-800 px-8 py-6 rounded text-md text-justify space-y-6 group'>
+                                <p>{project.shortDescription}</p>
+
+                                <ul className="list-none ml-0 space-y-4 pl-6 relative before:content-[''] before:absolute before:left-[0.4rem] before:top-4 before:bottom-0 before:w-0.5 before:bg-blue-800 max-h-0 opacity-0 overflow-hidden group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                                    {project?.tasks?.map((task, index) => (
+                                        <li className='text-sm relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-blue-800 before:rounded-full' key={`task - ${index} - ${project.title}`}> {task}</li>
+                                    ))}
+                                </ul>
+                            </div>
 
                             <div className='flex flex-wrap grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-5 w-full'>
                                 {project.tools.map((tool) => (
