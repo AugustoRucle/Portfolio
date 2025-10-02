@@ -30,7 +30,7 @@ export default function Skills() {
                     Icon={ReactIcon}
                     name="React JS"
                     category="Librería • Frontend"
-                    percentage={70}
+                    percentage={100}
                     color="bg-[#61DAFB]"
                 />
 
@@ -39,7 +39,7 @@ export default function Skills() {
                     Icon={VueIcon}
                     name="Vue Js"
                     category="Librería • Frontend"
-                    percentage={70}
+                    percentage={80}
                     color="bg-[#4FC08D]"
                 />
 
@@ -48,7 +48,7 @@ export default function Skills() {
                     Icon={ThreeJSIcon}
                     name="Three Js"
                     category="Librería • Frontend"
-                    percentage={70}
+                    percentage={60}
                     color="bg-[#4FC08D]"
                 />
 
@@ -57,7 +57,7 @@ export default function Skills() {
                     Icon={JSIcon}
                     name="JavaScript"
                     category="Lenguaje • Frontend"
-                    percentage={70}
+                    percentage={100}
                     color="bg-[#F7DF1E]"
                 />
 
@@ -66,7 +66,7 @@ export default function Skills() {
                     Icon={TypeScriptIcon}
                     name="Typescript"
                     category="Lenguaje • Frontend"
-                    percentage={70}
+                    percentage={80}
                     color="bg-[#F7DF1E]"
                 />
 
@@ -75,7 +75,7 @@ export default function Skills() {
                     Icon={CSS3Icon}
                     name="CSS3"
                     category="Lenguaje • Frontend"
-                    percentage={70}
+                    percentage={100}
                     color="bg-[#1572B6]"
                 />
 
@@ -93,7 +93,7 @@ export default function Skills() {
                     Icon={PythonIcon}
                     name="Python"
                     category="Lenguaje • Backend"
-                    percentage={40}
+                    percentage={30}
                     color="bg-[#777BB4]"
                 />
 
@@ -112,7 +112,7 @@ export default function Skills() {
                     Icon={GithubIcon}
                     name="Git & Github"
                     category="Devops Tools"
-                    percentage={80}
+                    percentage={50}
                     color="bg-[#F05032]"
                 />
 
@@ -121,7 +121,7 @@ export default function Skills() {
                     Icon={AWSIcon}
                     name="AWS"
                     category="Devops Tools"
-                    percentage={80}
+                    percentage={10}
                     color="bg-[#F05032]"
                 />
 
@@ -130,7 +130,7 @@ export default function Skills() {
                     Icon={CloudFlareIcon}
                     name="Cloudflare"
                     category="Devops Tools"
-                    percentage={80}
+                    percentage={30}
                     color="bg-[#F05032]"
                 />
 
@@ -139,7 +139,7 @@ export default function Skills() {
                     Icon={FrameworkIcon}
                     name="Next JS"
                     category="Framework • Frontend"
-                    percentage={80}
+                    percentage={60}
                     color="bg-[#F05032]"
                 />
 
@@ -148,7 +148,7 @@ export default function Skills() {
                     Icon={FrameworkIcon}
                     name="Nuxt JS"
                     category="Framework • Frontend"
-                    percentage={80}
+                    percentage={40}
                     color="bg-[#F05032]"
                 />
 
@@ -157,7 +157,7 @@ export default function Skills() {
                     Icon={FigmaIcon}
                     name="Figma"
                     category="UX • Design Tools"
-                    percentage={50}
+                    percentage={90}
                     color="bg-[#F24E1E]"
                 />
             </div>
