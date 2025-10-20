@@ -112,12 +112,12 @@ export default function Portfolio() {
                                     ))}
                                 </ul>
 
-                                <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${
+                                <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 transition-all duration-300 ${
                                     isMobile
-                                        ? activeCard === index ? 'opacity-0' : 'opacity-100'
+                                        ? activeCard === index ? 'rotate-180' : 'rotate-0'
                                         : 'opacity-100 group-hover:opacity-0'
                                 }`}>
-                                    <DownOutlined className='text-xl font-bold animate-bounce' />
+                                    <DownOutlined className={`text-xl font-bold ${isMobile ? '' : 'animate-bounce'}`} />
                                 </div>
                             </div>
 
