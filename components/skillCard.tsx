@@ -1,3 +1,5 @@
+import AnimatedBorder from './AnimatedBorder'
+
 export default function SkillCard({
     Icon,
     name,
@@ -13,19 +15,8 @@ export default function SkillCard({
 }) {
     return (
         <div className="group relative bg-radial-[at_50%_50%] from-neutral-900 to-white to-1100% rounded-xl p-6 shadow-xl border border-neutral-900 hover:scale-110 transform transition-transform duration-300">
-            <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                    className="stroke-yellow-600 fill-none transition-all duration-800 [stroke-dasharray:0_1000] group-hover:[stroke-dasharray:1000_0]"
-                    x="1"
-                    y="1"
-                    width="calc(100% - 2px)"
-                    height="calc(100% - 2px)"
-                    rx="12"
-                    strokeWidth="2"
-                    pathLength="1000"
-                    strokeDashoffset="0"
-                />
-            </svg>
+            <AnimatedBorder />
+
             <div className="flex flex-col items-center justify-center space-x-4 space-y-4 mb-6 relative z-10">
                 <div
                     className={`w-20 h-20 rounded-lg flex items-center justify-center font-bold text-lg`}

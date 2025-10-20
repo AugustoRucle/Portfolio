@@ -1,5 +1,5 @@
 import { useLanguageContext } from "@/context/laguageContext";
-import { CalendarOutlined, GlobalOutlined, LaptopOutlined } from "@ant-design/icons";
+import { CalendarOutlined, GlobalOutlined, LaptopOutlined, DownOutlined } from "@ant-design/icons";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
@@ -18,6 +18,7 @@ import ThreeJsLogo from '../../public/threejs-icon.png';
 import LaravelLogo from '../../public/lavarel.png';
 import VuejsLogo from '../../public/vuejslogo.png';
 import Css3Logo from '../../public/css3.png';
+import AnimatedBorder from "../AnimatedBorder";
 
 export default function Portfolio() {
     const { language } = useLanguageContext();
@@ -29,7 +30,7 @@ export default function Portfolio() {
                 alt: 'Shedcloud portal',
             },
             title: 'Shedcloud',
-            active: true,
+            active: false,
             company: {
                 link: 'https://www1.realhost.com.mx',
                 name: 'realhost.com.mx'
@@ -94,7 +95,7 @@ export default function Portfolio() {
                 alt: '3D Shedcloud portal',
             },
             title: '3D Shedcloud portal',
-            active: true,
+            active: false,
             company: {
                 link: 'https://www1.realhost.com.mx',
                 name: 'realhost.com.mx'
@@ -152,7 +153,7 @@ export default function Portfolio() {
                 alt: 'Factura tu ticket portal',
             },
             title: 'Factura tu ticket',
-            active: true,
+            active: false,
             company: {
                 link: 'https://www1.realhost.com.mx',
                 name: 'realhost.com.mx'
@@ -202,7 +203,6 @@ export default function Portfolio() {
             </h2>
 
             <div className='space-y-30'>
-
                 {PROJECTS.map((project) => (
                     <div
                         key={`project_${project.title}`}
@@ -249,18 +249,23 @@ export default function Portfolio() {
                                 </p>
                             </div>
 
-                            {/* shadow-xl/30 shadow-blue-500/30  */}
-                            <div className='bg-neutral-800 px-8 py-6 rounded text-md text-justify space-y-6 group'>
-                                <p>{project.shortDescription}</p>
+                            <div className='relative group shadow-2xl shadow-gray-800 hover:shadow-2xl hover:shadow-yellow-900 bg-neutral-800 px-8 py-6 rounded text-md text-justify space-y-6 group'>
+                                <AnimatedBorder />
 
-                                <ul className="list-none ml-0 space-y-4 pl-6 relative before:content-[''] before:absolute before:left-[0.4rem] before:top-4 before:bottom-0 before:w-0.5 before:bg-blue-800 max-h-0 opacity-0 overflow-hidden group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                                <p className='group-hover:border-b-1 pb-5 border-yellow-600' >{project.shortDescription}</p>
+
+                                <ul className="list-none ml-0 space-y-4 pl-6 relative before:content-[''] before:absolute before:left-[0.4rem] before:top-4 before:bottom-0 before:w-0.5 before:bg-yellow-600 max-h-0 opacity-0 overflow-hidden group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                                     {project?.tasks?.map((task, index) => (
-                                        <li className='text-sm relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-blue-800 before:rounded-full' key={`task - ${index} - ${project.title}`}> {task}</li>
+                                        <li className='text-sm font-light relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-yellow-600 before:rounded-full' key={`task - ${index} - ${project.title}`}> {task}</li>
                                     ))}
                                 </ul>
+
+                                <div className='absolute bottom-2 left-1/2 -translate-x-1/2 opacity-100 group-hover:opacity-0 transition-opacity duration-300'>
+                                    <DownOutlined className='text-xl font-bold animate-bounce' />
+                                </div>
                             </div>
 
-                            <div className='flex flex-wrap grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-5 w-full'>
+                            <div className='mt-6 flex flex-wrap grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-5 w-full'>
                                 {project.tools.map((tool) => (
                                     <div key={`${tool.imgAlt} - ${project.title}`} className='flex items-center space-x-2 grow'>
                                         <Image
