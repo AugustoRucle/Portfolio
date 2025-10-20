@@ -252,11 +252,11 @@ export default function Portfolio() {
                             <div className='relative group shadow-2xl shadow-gray-800 hover:shadow-2xl hover:shadow-yellow-900 bg-neutral-800 px-8 py-6 rounded text-md text-justify space-y-6 group'>
                                 <AnimatedBorder />
 
-                                <p className='group-hover:border-b-1 pb-5 border-yellow-600' >{project.shortDescription}</p>
+                                <p className='group-hover:border-b-1 pb-5 border-yellow-600 font-light' >{project.shortDescription}</p>
 
                                 <ul className="list-none ml-0 space-y-4 pl-6 relative before:content-[''] before:absolute before:left-[0.4rem] before:top-4 before:bottom-0 before:w-0.5 before:bg-yellow-600 max-h-0 opacity-0 overflow-hidden group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                                     {project?.tasks?.map((task, index) => (
-                                        <li className='text-sm font-light relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-yellow-600 before:rounded-full' key={`task - ${index} - ${project.title}`}> {task}</li>
+                                        <li className='text-sm relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-yellow-600 before:rounded-full' key={`task - ${index} - ${project.title}`}> {task}</li>
                                     ))}
                                 </ul>
 
