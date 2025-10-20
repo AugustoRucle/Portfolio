@@ -1,0 +1,169 @@
+[
+    {
+        "id": "shedcloud",
+        "title": "Shedcloud",
+        "active": true,
+        "img": {
+            "source": "/shedcloud_c.webp",
+            "alt": "Shedcloud portal"
+        },
+        "company": {
+            "link": "https://www1.realhost.com.mx",
+            "name": "realhost.com.mx"
+        },
+        "date": "2021-2025",
+        "shortDescriptionKey": "experenceShedcloudShortDescription",
+        "tasksKeys": [
+            "experenceShedcloudTask1",
+            "experenceShedcloudTask2",
+            "experenceShedcloudTask3",
+            "experenceShedcloudTask4",
+            "experenceShedcloudTask5"
+        ],
+        "tools": [
+            {
+                "imgSrc": "/react.webp",
+                "imgAlt": "React logo",
+                "imgClassName": "w-auto h-5 rounded object-cover",
+                "name": "React"
+            },
+            {
+                "imgSrc": "/javascript.webp",
+                "imgAlt": "Javascript logo",
+                "imgClassName": "w-auto h-7 rounded object-cover",
+                "name": "Javascript"
+            },
+            {
+                "imgSrc": "/tailwind.webp",
+                "imgAlt": "Tawilwind logo",
+                "imgClassName": "w-auto h-6 rounded object-cover",
+                "name": "Tailwindcss"
+            },
+            {
+                "imgSrc": "/redux.webp",
+                "imgAlt": "Redux logo",
+                "imgClassName": "w-auto h-6 rounded object-cover",
+                "name": "Redux"
+            },
+            {
+                "imgSrc": "/amplify-logo.webp",
+                "imgAlt": "Amplify logo",
+                "imgClassName": "w-auto h-5 rounded object-cover",
+                "name": "AWS Amplify"
+            },
+            {
+                "imgSrc": "/ant-design.webp",
+                "imgAlt": "Ant design logo",
+                "imgClassName": "w-auto h-6 rounded object-cover",
+                "name": "Ant design"
+            }
+        ],
+        "website": {
+            "link": "https://io.shedcloud.com/",
+            "name": "io.shedcloud.com"
+        }
+    },
+    {
+        "id": "3d-portal",
+        "title": "3D Shedcloud portal",
+        "active": true,
+        "img": {
+            "source": "/3dportal_c.webp",
+            "alt": "3D Shedcloud portal"
+        },
+        "company": {
+            "link": "https://www1.realhost.com.mx",
+            "name": "realhost.com.mx"
+        },
+        "date": "2021-2025",
+        "shortDescriptionKey": "experence3DportalShortDescription",
+        "tasksKeys": [
+            "experence3DportalTask1",
+            "experence3DportalTask2",
+            "experence3DportalTask3",
+            "experence3DportalTask4"
+        ],
+        "tools": [
+            {
+                "imgSrc": "/react.webp",
+                "imgAlt": "React logo",
+                "imgClassName": "w-auto h-5 rounded object-cover",
+                "name": "React"
+            },
+            {
+                "imgSrc": "/javascript.webp",
+                "imgAlt": "Javascript logo",
+                "imgClassName": "w-auto h-8 rounded object-cover",
+                "name": "Javascript"
+            },
+            {
+                "imgSrc": "/tailwind.webp",
+                "imgAlt": "Tawilwind logo",
+                "imgClassName": "w-auto h-4 rounded object-cover",
+                "name": "Tailwindcss"
+            },
+            {
+                "imgSrc": "/amplify-logo.webp",
+                "imgAlt": "Amplify logo",
+                "imgClassName": "w-auto h-5 rounded object-cover",
+                "name": "AWS Amplify"
+            },
+            {
+                "imgSrc": "/threejs-icon.png",
+                "imgAlt": "Three js logo",
+                "imgClassName": "w-auto h-6 rounded object-cover",
+                "name": "Three JS"
+            }
+        ],
+        "website": {
+            "link": "https://barnssheds.shedcloud.com/configurator/6529b409e7d0f84e18e2a108",
+            "name": "barnssheds.shedcloud.com"
+        }
+    },
+    {
+        "id": "facturatuticket",
+        "title": "Factura tu ticket",
+        "active": true,
+        "img": {
+            "source": "/facturatuticket_with_bgc.webp",
+            "alt": "Factura tu ticket portal"
+        },
+        "company": {
+            "link": "https://www1.realhost.com.mx",
+            "name": "realhost.com.mx"
+        },
+        "dateKey": "experenceFacturatuticketDate",
+        "shortDescriptionKey": "experenceFacturatuticketShortDescription",
+        "tasksKeys": [
+            "experenceFacturatuticketTask1",
+            "experenceFacturatuticketTask2",
+            "experenceFacturatuticketTask3",
+            "experenceFacturatuticketTask4",
+            "experenceFacturatuticketTask5"
+        ],
+        "tools": [
+            {
+                "imgSrc": "/lavarel.png",
+                "imgAlt": "Laravel logo",
+                "imgClassName": "w-auto h-8 rounded object-cover",
+                "name": "Laravel"
+            },
+            {
+                "imgSrc": "/vuejslogo.png",
+                "imgAlt": "Vuejs logo",
+                "imgClassName": "w-auto h-5 rounded object-cover",
+                "name": "Vue JS"
+            },
+            {
+                "imgSrc": "/css3.png",
+                "imgAlt": "CSS3 logo",
+                "imgClassName": "w-auto h-8 rounded object-cover",
+                "name": "CSS3"
+            }
+        ],
+        "website": {
+            "link": "https://www.facturatuticket.com/",
+            "name": "facturatuticket.com"
+        }
+    }
+]

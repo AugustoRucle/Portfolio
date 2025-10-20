@@ -1,8 +1,14 @@
-export default function AnimatedBorder() {
+export default function AnimatedBorder({ isActive = false, isMobile = false }: { isActive?: boolean, isMobile?: boolean }) {
     return (
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
             <rect
-                className="stroke-yellow-600 fill-none transition-all duration-800 [stroke-dasharray:0_1000] group-hover:[stroke-dasharray:1000_0]"
+                className={`stroke-yellow-600 fill-none transition-all duration-800 ${
+                    isMobile && isActive
+                        ? '[stroke-dasharray:1000_0]'
+                        : isMobile
+                        ? '[stroke-dasharray:0_1000]'
+                        : '[stroke-dasharray:0_1000] group-hover:[stroke-dasharray:1000_0]'
+                }`}
                 x="1"
                 y="1"
                 width="calc(100% - 2px)"
