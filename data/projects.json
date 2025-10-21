@@ -2,7 +2,7 @@
     {
         "id": "shedcloud",
         "title": "Shedcloud",
-        "active": true,
+        "active": false,
         "img": {
             "source": "/shedcloud_c.webp",
             "alt": "Shedcloud portal"
@@ -66,7 +66,7 @@
     {
         "id": "3d-portal",
         "title": "3D Shedcloud portal",
-        "active": true,
+        "active": false,
         "img": {
             "source": "/3dportal_c.webp",
             "alt": "3D Shedcloud portal"
@@ -123,7 +123,7 @@
     {
         "id": "facturatuticket",
         "title": "Factura tu ticket",
-        "active": true,
+        "active": false,
         "img": {
             "source": "/facturatuticket_with_bgc.webp",
             "alt": "Factura tu ticket portal"
