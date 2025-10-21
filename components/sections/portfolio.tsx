@@ -104,8 +104,8 @@ export default function Portfolio() {
 
                                 <ul className={`list-none ml-0 space-y-4 pl-6 relative before:content-[''] before:absolute before:left-[0.4rem] before:top-4 before:bottom-0 before:w-0.5 before:bg-yellow-600 overflow-hidden transition-all duration-500 ease-in-out ${
                                     isMobile
-                                        ? activeCard === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                                        : 'max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100'
+                                        ? activeCard === index ? 'max-h-200 opacity-100' : 'max-h-0 opacity-0'
+                                        : 'max-h-0 opacity-0 group-hover:max-h-200 group-hover:opacity-100'
                                 }`}>
                                     {project?.tasks?.map((task, taskIndex) => (
                                         <li className='text-sm relative before:content-[""] before:absolute before:left-[-1.275rem] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-yellow-600 before:rounded-full' key={`task - ${taskIndex} - ${project.title}`}> {task}</li>
