@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="pt-6">
                     <button
                         onClick={() => scrollToSection('portfolio')}
-                        className="rounded w-full sm:w-full md:w-auto lg:w-auto xl:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg group transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-inner hover:shadow-black/30 font-heading"
+                        className="rounded w-full sm:w-full md:w-auto lg:w-auto xl:w-auto bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-8 py-4 text-lg group transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-inner hover:shadow-black/30 font-heading"
                     >
                         <FormattedMessage id="exploreMyWork" />
                         <RightOutlined className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
